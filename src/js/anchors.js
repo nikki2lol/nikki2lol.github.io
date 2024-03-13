@@ -10,8 +10,6 @@ export const makeAnchors = () => {
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                const offset = targetElement.getBoundingClientRect().top - header.offsetHeight - (window.innerHeight - targetElement.clientHeight) / 2;
-
                 window.scrollTo({
                     top: targetElement.offsetTop - header.offsetHeight,
                     behavior: 'smooth'

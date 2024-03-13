@@ -19,16 +19,20 @@
 			<nav class="header__navigation">
 				<ul class="header__nav-list">
 					<li class="header__item">
-						<a href="#promise" class="header__anchor-button anchor-button js-anchor-button">Our promise</a>
+						<a href="#promise" class="header__anchor-button anchor-button js-anchor-button"
+						   aria-label="scroll to block 'Our promise'">Our promise</a>
 					</li>
 					<li class="header__item">
-						<a href="#offer" class="header__anchor-button anchor-button js-anchor-button">Our Offer</a>
+						<a href="#offer" class="header__anchor-button anchor-button js-anchor-button"
+						   aria-label="scroll to block 'Our Offer'">Our Offer</a>
 					</li>
 					<li class="header__item">
-						<a href="#contacts" class="header__anchor-button anchor-button js-anchor-button">Contacts</a>
+						<a href="#contacts" class="header__anchor-button anchor-button js-anchor-button"
+						   aria-label="scroll to block 'Contacts'">Contacts</a>
 					</li>
 					<li class="header__item">
-						<a href="#form" class="header__anchor-button button button--white js-anchor-button">Become a partner</a>
+						<a href="#form" class="header__anchor-button button button--white js-anchor-button"
+						   aria-label="scroll to block 'Become a partner'">Become a partner</a>
 					</li>
 				</ul>
 				<button class="header__burger hide-desktop js-burger" aria-label="toggle navigation menu">
@@ -42,8 +46,8 @@
 
 	<section id="hero" class="hero">
 		<picture class="hero__background">
-			<source media="(max-width: 767px)" srcset="/images/hero-background-mobile.jpg"/>
-			<img src="/images/hero-background.jpg" width="1600" height="889" alt="background"/>
+			<source media="(max-width: 767px)" srcset="/images/hero-background-mobile.webp"/>
+			<img src="/images/hero-background.webp" width="1600" height="889" alt="background"/>
 		</picture>
 		<div class="hero__wrapper wrapper">
 			<div class="hero__content">
@@ -85,8 +89,8 @@
 					</ul>
 				</div>
 				<picture class="about__image-content">
-					<source media="(max-width: 767px)" srcset="/images/about-picture-mobile.jpg"/>
-					<img src="/images/about-picture.jpg" width="1500" height="1100" alt="about us"/>
+					<source media="(max-width: 767px)" srcset="/images/about-picture-mobile.webp"/>
+					<img src="/images/about-picture.webp" width="1747" height="1165" alt="about us"/>
 				</picture>
 			</div>
 		</div>
@@ -108,8 +112,7 @@
 						to sustainably improve the quality of life of our customers.</p>
 				</div>
 				<picture class="promise__image-content">
-					<source media="(max-width: 767px)" srcset="/images/promise-picture-mobile.jpg"/>
-					<img src="/images/promise-picture.jpg" width="1500" height="945" alt="our promise"/>
+					<img src="/images/promise-picture.webp" width="1600" height="900" alt="our promise"/>
 				</picture>
 			</div>
 		</div>
@@ -125,23 +128,43 @@
 				</div>
 				<ul class="offer__advantages">
 					<li class="offer__item">
-						<img width="120" height="120" src="/images/offer-icon1.png" alt="Ready-Wear">
+						<div class="offer__item-icon">
+							<svg>
+								<use xlink:href="#offer-icon1"></use>
+							</svg>
+						</div>
 						<p>Ready-Wear</p>
 					</li>
 					<li class="offer__item">
-						<img width="120" height="120" src="/images/offer-icon2.png" alt="Telecom Equipment">
+						<div class="offer__item-icon">
+							<svg>
+								<use xlink:href="#offer-icon2"></use>
+							</svg>
+						</div>
 						<p>Telecom Equipment</p>
 					</li>
 					<li class="offer__item">
-						<img width="120" height="120" src="/images/offer-icon3.png" alt="Shoes">
+						<div class="offer__item-icon">
+							<svg>
+								<use xlink:href="#offer-icon3"></use>
+							</svg>
+						</div>
 						<p>Shoes</p>
 					</li>
 					<li class="offer__item">
-						<img width="120" height="120" src="/images/offer-icon4.png" alt="Wireless Comm Equipment">
+						<div class="offer__item-icon">
+							<svg>
+								<use xlink:href="#offer-icon4"></use>
+							</svg>
+						</div>
 						<p>Wireless Comm Equipment</p>
 					</li>
 					<li class="offer__item">
-						<img width="120" height="120" src="/images/offer-icon5.png" alt="Electronics Spare Parts">
+						<div class="offer__item-icon">
+							<svg>
+								<use xlink:href="#offer-icon5"></use>
+							</svg>
+						</div>
 						<p>Electronics Spare Parts</p>
 					</li>
 				</ul>
@@ -157,7 +180,7 @@
 					<p class="contacts__text">We are always looking for partners who want to take the next step with us. If you
 						are interested, please contact our sales team!</p>
 					<div class="contacts__links">
-						<a href="tel:+971 (54) 364-67-96" class="contacts__link contacts__link--number" target="_blank">
+						<a href="tel:+971543646796" class="contacts__link contacts__link--number" target="_blank">
 							<svg class="icon">
 								<use xlink:href="#phone"></use>
 							</svg>
@@ -187,7 +210,9 @@
 									<use xlink:href="#warning-icon"></use>
 								</svg>
 							</label>
-							<button class="form__submit-button button button--dark button--submit" type="submit">Send request</button>
+							<button class="form__submit-button button button--dark button--submit" type="submit"
+							        aria-label="submit button">Send request
+							</button>
 						</div>
 						<div class="form__success-block">
 							<svg class="form__success-icon">
@@ -196,8 +221,6 @@
 							<p class="form__text">Your request was sent!</p>
 						</div>
 					</div>
-					<!--					<p class="form__text">By sending request, you agree<br/> to our <a href="#" target="_blank">Privacy Policy</a>-->
-					<!--					</p>-->
 				</form>
 			</div>
 
@@ -266,6 +289,37 @@
 		<path fill="red"
 		      d="M12 18.222a1.18 1.18 0 1 0 0-2.36 1.18 1.18 0 0 0 0 2.36ZM12 15.02c.614 0 1.11-.497 1.11-1.11V7.555a1.11 1.11 0 1 0-2.221 0v6.355c0 .613.497 1.11 1.11 1.11Z"/>
 	</symbol>
+
+	<symbol id="offer-icon1" viewBox="0 0 120 120">
+		<path fill="#4B57A2" fill-rule="evenodd"
+		      d="M47.035 39c1.892 5.336 6.989 9.167 12.965 9.167S71.073 44.336 72.965 39h5.33c5.083 0 11.49 3.427 14.312 7.66l13.226 19.84L90.25 78.875l-2.75-3.208v41.271c0 2.519-2.089 4.562-4.595 4.562h-45.81c-2.538 0-4.595-2.088-4.595-4.562V75.667l-2.292 3.208L14.167 66.5l13.226-19.84c2.82-4.23 9.24-7.66 14.313-7.66h5.33ZM73.75 66.5a4.588 4.588 0 0 0-4.583 4.583 4.588 4.588 0 0 0 4.583 4.584 4.588 4.588 0 0 0 4.583-4.584A4.588 4.588 0 0 0 73.75 66.5Z"
+		      clip-rule="evenodd"/>
+	</symbol>
+	<symbol id="offer-icon2" viewBox="0 0 120 120">
+		<path fill="#4B57A2"
+		      d="M79.773 24H39.227a9.16 9.16 0 0 0-6.518 2.735A9.431 9.431 0 0 0 30 33.343v82.315a9.432 9.432 0 0 0 2.71 6.607A9.162 9.162 0 0 0 39.226 125h40.546a9.162 9.162 0 0 0 6.518-2.735A9.433 9.433 0 0 0 89 115.658V33.342a9.432 9.432 0 0 0-2.71-6.607A9.16 9.16 0 0 0 79.774 24ZM59.5 119.173a3.43 3.43 0 0 1-1.927-.594 3.502 3.502 0 0 1-1.276-1.581 3.562 3.562 0 0 1-.194-2.034 3.531 3.531 0 0 1 .954-1.799 3.423 3.423 0 0 1 3.782-.75 3.476 3.476 0 0 1 1.551 1.304 3.55 3.55 0 0 1 .575 1.958 3.54 3.54 0 0 1-1.022 2.473 3.44 3.44 0 0 1-2.443 1.023Zm6.91-83.927H52.59a1.914 1.914 0 0 1-1.02-.695 1.961 1.961 0 0 1 0-2.359 1.913 1.913 0 0 1 1.02-.695h13.82c.406.112.764.356 1.02.695a1.96 1.96 0 0 1 0 2.36 1.914 1.914 0 0 1-1.02.694Z"/>
+	</symbol>
+	<symbol id="offer-icon3" viewBox="0 0 120 120">
+		<path fill="#4B57A2"
+		      d="M56.581 89.16c-2.692-5.176-6.966-13.123-13.384-14.416-1.104 1.698-2.578 2.278-4.42 1.738-6.671 9.408-10.625 22.526-9.454 34.074 6.423 11.486 6.925 47.098 28.788 36.498 9.349-4.532 6.855-15.857 4.296-23.808-4.159-12.904-5.917-20.415-5.826-34.087-.027 3.902-.909-1.745 0 0Z"/>
+		<path fill="#4B57A2"
+		      d="M27.309 94.859c1.73-7.211 4.628-14.9 9.164-20.845-1.186-4.153 4.806-6.337 6.73-2.65 5.092.703 9.554 5.254 13.21 10.895-.787-13.788-5.877-35.225-24.003-25.545-17.326 9.251-13.518 32.835-6.518 47.44.179-2.982.647-6.083 1.417-9.295 1.397-5.83-.77 3.212 0 0ZM65.77 69.542c1.633-5.6 4.266-14.228 10.31-16.752 1.415 1.45 2.974 1.73 4.676.841 8.38 7.924 14.822 20.014 15.928 31.57-3.717 11.482 1.084 52.77-23.677 40.469-8.222-4.083-7.085-15.468-6.112-22.986 1.676-12.966 1.54-20.233-1.125-33.142.789 3.823.55-1.887 0 0Z"/>
+		<path fill="#4B57A2"
+		      d="M95.59 69.413c-3.104-6.735-7.45-13.71-13.06-18.654.359-4.305-5.952-5.273-7.119-1.282-4.855 1.682-8.343 7.02-10.826 13.266-1.922-13.677-1.12-35.695 18.548-29.745 18.8 5.69 19.674 29.562 15.666 45.252-.759-2.888-1.825-5.839-3.209-8.837 1.385 2.998-2.508-5.444 0 0Z"/>
+	</symbol>
+	<symbol id="offer-icon4" viewBox="0 0 120 120">
+		<path fill="#4B57A2"
+		      d="M103.017 90.996H69.192l-3.375-26.072c2.09-1.207 3.516-3.441 3.516-6.024a6.99 6.99 0 0 0-6.982-6.982c-3.83 0-6.981 3.132-6.981 6.982 0 2.595 1.448 4.838 3.555 6.041l-3.392 26.055h-38.81A6.726 6.726 0 0 0 10 97.718v15.64a6.725 6.725 0 0 0 6.722 6.722h86.295a6.726 6.726 0 0 0 6.723-6.722v-15.64a6.726 6.726 0 0 0-6.723-6.722Zm-43.461-.006 2.813-21.612 2.799 21.612h-5.612ZM44.3 111.522c-3.291 0-5.984-2.693-5.984-5.984a5.99 5.99 0 0 1 5.984-5.984 5.977 5.977 0 0 1 5.984 5.984 5.989 5.989 0 0 1-5.984 5.984Zm17.794 0a5.989 5.989 0 0 1-5.985-5.984 5.977 5.977 0 0 1 5.985-5.984 5.99 5.99 0 0 1 5.984 5.984c0 3.291-2.693 5.984-5.984 5.984Zm17.773 0c-3.291 0-5.984-2.693-5.984-5.984a5.99 5.99 0 0 1 5.984-5.984 5.977 5.977 0 0 1 5.985 5.984 5.99 5.99 0 0 1-5.985 5.984ZM51.874 48.326a1.987 1.987 0 0 0 0 2.813 2.01 2.01 0 0 0 2.833 0c4.268-4.27 11.23-4.27 15.5 0 .398.399.917.578 1.416.578a1.987 1.987 0 0 0 1.416-3.391c-5.845-5.845-15.34-5.845-21.165 0ZM43.416 39.85c5.067-5.068 11.83-7.86 19.03-7.86 7.222 0 13.964 2.792 19.05 7.86a1.98 1.98 0 0 0 1.417.597c.499 0 1.017-.2 1.396-.598a1.952 1.952 0 0 0 0-2.813C78.485 31.212 70.725 28 62.447 28c-8.259 0-16.019 3.212-21.864 9.036a1.987 1.987 0 0 0 0 2.813c.799.798 2.055.798 2.833 0Z"/>
+		<path fill="#4B57A2"
+		      d="M77.268 46.093c.518 0 1.017-.2 1.416-.599a1.986 1.986 0 0 0 0-2.812c-8.957-8.937-23.499-8.957-32.455 0a1.986 1.986 0 0 0 0 2.812 2.01 2.01 0 0 0 2.832 0c7.381-7.38 19.41-7.38 26.79 0a1.98 1.98 0 0 0 1.417.599Z"/>
+	</symbol>
+	<symbol id="offer-icon5" viewBox="0 0 120 120">
+		<path fill="#4B57A2"
+		      d="M60 62.364a21.09 21.09 0 1 0 0 42.182 21.09 21.09 0 0 0 0-42.182Zm0 25.045a3.955 3.955 0 1 1 0-7.91 3.955 3.955 0 0 1 0 7.91Z"/>
+		<path fill="#4B57A2"
+		      d="M86.364 36H33.636a7.91 7.91 0 0 0-7.909 7.91v71.181a7.907 7.907 0 0 0 7.91 7.909h52.727a7.906 7.906 0 0 0 7.909-7.909V43.909A7.91 7.91 0 0 0 86.363 36Zm-50.091 7.91a2.636 2.636 0 1 1 0 5.271 2.636 2.636 0 0 1 0-5.272Zm0 71.181a2.641 2.641 0 0 1-2.436-1.628 2.634 2.634 0 0 1 1.921-3.594 2.63 2.63 0 0 1 2.707 1.121 2.635 2.635 0 0 1-2.192 4.101ZM60 108.5a25.046 25.046 0 1 1 0-50.092 25.046 25.046 0 0 1 0 50.092Zm23.727 6.591a2.642 2.642 0 0 1-2.435-1.628 2.635 2.635 0 0 1 4.627-2.473 2.635 2.635 0 0 1-2.192 4.101Zm0-65.91a2.636 2.636 0 1 1 0-5.272 2.636 2.636 0 0 1 0 5.273Z"/>
+	</symbol>
+
 </svg>
 
 <script src="js/main.js" type="module"></script>
