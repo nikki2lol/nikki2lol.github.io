@@ -1,0 +1,122 @@
+.contacts {
+  background-color: $white-blue;
+
+  &__wrapper {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @include after($p768) {
+      padding-top: 71px;
+      padding-bottom: 71px;
+    }
+
+    @include after($p1025) {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+
+    @include after($p1440) {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+  }
+
+  &__content {
+    @include after($p768) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    max-width: 240px;
+    margin-bottom: 24px;
+    color: #272D54;
+
+    @include after($p1025) {
+      max-width: 300px;
+    }
+
+    @include after($p1440) {
+      max-width: unset;
+    }
+  }
+
+  &__text {
+    color: $grey3;
+    margin-bottom: 24px;
+    max-width: 835px;
+  }
+
+  &__links {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #272D54;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+
+    @include after($p1025) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    .icon {
+      display: block;
+      width: 24px;
+      min-width: 24px;
+      height: 24px;
+      min-height: 24px;
+      margin-right: 16px;
+
+      @include after($p768) {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+        min-height: 32px;
+      }
+    }
+
+    @include after($p1025) {
+      &:hover {
+        color: $blue2;
+      }
+    }
+  }
+
+  &__line + .contacts__line {
+    margin-top: 8px;
+  }
+
+  &__info {
+    @include after($p768) {
+      width: calc(100% - 305px - 24px);
+      margin-right: 24px;
+    }
+    @include after($p1025) {
+      width: calc(100% - 381px - 24px);
+    }
+  }
+
+  &__form {
+    @include before($p768) {
+      margin-top: 42px;
+    }
+
+    @include after($p768) {
+      width: 305px;
+      min-width: 305px;
+    }
+
+    @include after($p1025) {
+      width: 381px;
+      min-width: 381px;
+    }
+  }
+}

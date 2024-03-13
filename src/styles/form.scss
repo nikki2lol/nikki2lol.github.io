@@ -1,0 +1,150 @@
+.form {
+  background-color: $white;
+  padding: 32px;
+  border-radius: 20px;
+
+  &__title {
+    max-width: 250px;
+    margin-bottom: 24px;
+
+    @include after($p768) {
+      max-width: unset;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    display: block;
+    position: relative;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  &__label + .form__label {
+    margin-top: 16px;
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    background-color: #F1F1F1;
+    padding: 11px 24px;
+    color: $grey3;
+    outline: none;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+
+    @include after($p768) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &::placeholder {
+      color: $grey1;
+      transition: color 0.3s ease;
+    }
+
+    &:focus {
+      border-color: #4B57A2;
+    }
+
+    &.error {
+      border-color: $red;
+
+      &::placeholder {
+        color: $red;
+      }
+
+      & + .icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__submit-button {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 18px;
+    color: $grey3;
+
+    @include after($p1025) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    a {
+      color: #4B57A2;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+  }
+
+  &__success-block {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  &__success-icon {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+    min-height: 54px;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &.success {
+    .form__inputs {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .form__success-block {
+      display: flex;
+    }
+  }
+}

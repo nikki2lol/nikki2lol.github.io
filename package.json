@@ -1,0 +1,19 @@
+{
+  "name": "wb_fze_landing_page",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "sass": "^1.71.1",
+    "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

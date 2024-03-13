@@ -1,0 +1,103 @@
+.button {
+  border-radius: 100px;
+  color: $blue3;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 16px;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+
+  &:visited {
+    color: $blue3;
+  }
+
+  @include after($p1025) {
+    padding: 8px 24px;
+  }
+}
+
+.button--large {
+  padding: 8px 24px;
+
+  @include after($p1025) {
+    font-size: 24px;
+    line-height: 36px;
+    padding: 16px 48px;
+  }
+}
+
+.button--submit {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 9px;
+
+  @include after($p1025) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.button--white {
+  background-color: $white;
+
+  &:hover {
+    @include after($p1025) {
+      background-color: $grey0;
+    }
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+.button--dark {
+  background-color: #272D54;
+  color: $white;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &:visited {
+    color: $white;
+  }
+}
+
+.anchor-button {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: $white;
+  position: relative;
+
+  @include after($p1025) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: $white;
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}

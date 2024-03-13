@@ -1,0 +1,42 @@
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include after($p768) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include after($p1025) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  @include after($p1440) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @include after($p1600) {
+    //padding-left: 180px;
+    //padding-right: 180px;
+  }
+}
+
+.svg-sprite {
+  display: none;
+}
+
+.hide-desktop {
+  @include after($p1025) {
+    display: none;
+  }
+}
+
+.hide-mobile {
+  @include before($p1025) {
+    display: none;
+  }
+}
