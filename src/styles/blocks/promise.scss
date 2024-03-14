@@ -5,6 +5,7 @@
   &__wrapper {
     padding-top: 32px;
     padding-bottom: 32px;
+    position: relative;
 
     @include after($p768) {
       padding-top: 44px;
