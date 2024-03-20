@@ -6,6 +6,7 @@
   &__title {
     max-width: 250px;
     margin-bottom: 24px;
+    color: $black;
 
     @include after($p768) {
       max-width: unset;
@@ -47,7 +48,7 @@
     line-height: 18px;
     font-weight: 400;
 
-    @include after($p768) {
+    @include after($p1025) {
       font-size: 16px;
       line-height: 24px;
     }

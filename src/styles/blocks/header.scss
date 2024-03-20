@@ -144,4 +144,8 @@
       background: transparentize($blue3, 0.1);
     }
   }
+
+  & + .background {
+    opacity: 1;
+  }
 }

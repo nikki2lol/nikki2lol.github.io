@@ -7,4 +7,8 @@ export const makeHeaderMenu = () => {
     burger.addEventListener('click', () => {
         header.classList.toggle(headerActiveClass);
     })
+
+    document.addEventListener('click', (evt) => {
+        if (!evt.target.closest('.header')) header.classList.remove(headerActiveClass);
+    })
 }

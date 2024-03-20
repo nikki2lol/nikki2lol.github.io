@@ -45,7 +45,7 @@
     line-height: 21px;
     font-weight: 400;
 
-    @include after($p768) {
+    @include after($p1025) {
       font-size: 20px;
       line-height: 30px;
     }
